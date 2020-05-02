@@ -1,0 +1,46 @@
+
+#include<iostream>
+using namespace std;
+int main(int argc, char *a[])
+{
+	/*collecting inputs here*/
+	unsigned int N;
+	cin>>N;
+	int temp;
+	unsigned long long int req[N];
+	unsigned long long int avl[N];
+	for(unsigned int i = 0; i<N; i++)
+	{
+		cin>>req[i];
+	}
+	for(unsigned int i = 0; i<N; i++)
+	{
+		cin>>avl[i];
+	}
+	/*till here*/
+	/*declaring my ans variable*/
+	unsigned long long int ans;
+	int var = 1;
+	for(unsigned int i = 0; i<N;i++)
+	{
+	    unsigned long long int value1  = avl[i];
+		unsigned long long int value2  = req[i]
+	    unsigned long long int value3 =  value1/value2;
+		/*initializing my ans variable for every test case only once*/
+		if(1 == var)
+		{
+			ans = value3;
+			var--;
+		}
+		/*checking the condition whether this value is greater than or less than equal to its previous calulated
+		value I will update the ans value as per question*/
+		if(ans>value3)
+	        ans = value3;
+	}
+	cout<<ans<<endl;
+	return 0;
+}
+
+
+
+
